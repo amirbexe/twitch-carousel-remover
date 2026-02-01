@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Twitch Customizer — Take Control of Your Twitch Homepage</title>
+  <meta name="description" content="Customize your Twitch homepage. Hide, rearrange, and organize sections with a visual drag-and-drop editor. Free Chrome extension.">
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="#" class="nav-logo">
+        <svg width="24" height="24" viewBox="0 0 20 20" fill="#9146ff">
+          <rect x="1" y="1" width="7" height="7" rx="1.5" opacity="0.9"/>
+          <rect x="11" y="1" width="7" height="7" rx="1.5" opacity="0.6"/>
+          <rect x="1" y="11" width="7" height="7" rx="1.5" opacity="0.6"/>
+          <rect x="11" y="11" width="7" height="7" rx="1.5" opacity="0.35"/>
+        </svg>
+        <span>Twitch Customizer</span>
+      </a>
+      <div class="nav-links">
+        <a href="#features">Features</a>
+        <a href="#how-it-works">How It Works</a>
+        <a href="#faq">FAQ</a>
+        <a href="#install" class="nav-cta">Install Free</a>
+      </div>
+    </div>
+  </nav>
+
+  <header class="hero" id="install">
+    <div class="hero-inner">
+      <div class="hero-badge">Free &amp; Open Source</div>
+      <h1>Take Control of Your<br><span class="highlight">Twitch Homepage</span></h1>
+      <p class="hero-sub">Hide the carousel, rearrange sections, and customize your Twitch experience with a visual drag-and-drop editor. No account needed.</p>
+      <div class="hero-buttons">
+        <a href="#" class="btn btn-primary" id="chrome-install-btn">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="4"/><line x1="21.17" y1="8" x2="12" y2="8"/><line x1="3.95" y1="6.06" x2="8.54" y2="14"/><line x1="10.88" y1="21.94" x2="15.46" y2="14"/></svg>
+          Add to Chrome — It's Free
+        </a>
+        <a href="https://github.com/amirbexe/twitch-carousel-remover" class="btn btn-secondary" target="_blank" rel="noopener">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+          View on GitHub
+        </a>
+      </div>
+      <p class="hero-stats">
+        <span>&#9733; 100% Free</span>
+        <span>&#128274; No Data Collected</span>
+        <span>&#9889; Lightweight</span>
+      </p>
+    </div>
+  </header>
+
+  <section class="features" id="features">
+    <div class="container">
+      <h2>Everything You Need</h2>
+      <p class="section-sub">One extension to customize your entire Twitch homepage.</p>
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon">&#10005;</div>
+          <h3>Hide Sections</h3>
+          <p>Remove the carousel, recommended channels, categories, or any section you don't want to see.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">&#9776;</div>
+          <h3>Drag &amp; Drop Reorder</h3>
+          <p>Rearrange homepage sections in any order you like. Put what matters most at the top.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">&#128274;</div>
+          <h3>Save &amp; Lock</h3>
+          <p>Your layout persists across sessions. Edit anytime, lock when you're happy.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">&#9998;</div>
+          <h3>Visual Editor</h3>
+          <p>Edit directly on the page. See outlines, labels, and controls on every section.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">&#128165;</div>
+          <h3>Instant Toggle</h3>
+          <p>One click from the nav bar to enter edit mode. No popups, no settings pages.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">&#128170;</div>
+          <h3>Lightweight</h3>
+          <p>No tracking, no analytics, no background processes. Runs only on Twitch pages.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="how-it-works" id="how-it-works">
+    <div class="container">
+      <h2>How It Works</h2>
+      <p class="section-sub">Three steps to a cleaner Twitch.</p>
+      <div class="steps">
+        <div class="step">
+          <div class="step-num">1</div>
+          <h3>Install the Extension</h3>
+          <p>Add Twitch Customizer from the Chrome Web Store. Takes 2 seconds.</p>
+        </div>
+        <div class="step">
+          <div class="step-num">2</div>
+          <h3>Enter Edit Mode</h3>
+          <p>Click the grid icon in the Twitch nav bar or the extension icon. Sections light up with controls.</p>
+        </div>
+        <div class="step">
+          <div class="step-num">3</div>
+          <h3>Customize &amp; Save</h3>
+          <p>Hide sections with the X button, drag to reorder, then hit Save &amp; Lock. Done.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="also" id="simple">
+    <div class="container">
+      <h2>Just Want to Remove the Carousel?</h2>
+      <p class="section-sub">We also have a dead-simple version that only hides the featured carousel. Zero settings, zero permissions.</p>
+      <a href="#" class="btn btn-secondary" id="simple-install-btn">Get Twitch Carousel Remover</a>
+    </div>
+  </section>
+
+  <section class="faq" id="faq">
+    <div class="container">
+      <h2>FAQ</h2>
+      <div class="faq-list">
+        <details class="faq-item">
+          <summary>Is it really free?</summary>
+          <p>Yes, completely free with no ads or premium tiers. The source code is open on GitHub.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Does it collect any data?</summary>
+          <p>No. The extension only uses local storage on your machine to save your layout preferences. Nothing is sent anywhere.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Will it break when Twitch updates?</summary>
+          <p>The extension detects sections dynamically rather than relying on specific class names, so it handles most Twitch updates gracefully. If something breaks, updates are pushed through the Chrome Web Store.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Does it work on Firefox?</summary>
+          <p>Currently Chrome only. Firefox support may come in the future.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Can I restore hidden sections?</summary>
+          <p>Yes. In edit mode, click "Hidden Sections" in the toolbar to see everything you've hidden, with an "Add Back" button for each one.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <section class="support" id="support">
+    <div class="container">
+      <h2>Support the Project</h2>
+      <p class="section-sub">If you find Twitch Customizer useful, consider buying me a coffee.</p>
+      <a href="#" class="btn btn-donate">&#9749; Buy Me a Coffee</a>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <p>&copy; 2025 Twitch Customizer. Not affiliated with Twitch or Amazon.</p>
+      <div class="footer-links">
+        <a href="https://github.com/amirbexe/twitch-carousel-remover" target="_blank" rel="noopener">GitHub</a>
+        <a href="#">Privacy Policy</a>
+        <a href="#">Contact</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
