@@ -1,16 +1,19 @@
 {
   "manifest_version": 3,
   "name": "Twitch Customizer",
-  "description": "Customize your Twitch homepage — hide, show, and drag-and-drop rearrange sections",
+  "description": "Customize your Twitch homepage — drag, rearrange, and hide sections in a live editor",
   "version": "2.0",
-  "permissions": ["storage"],
+  "permissions": ["storage", "activeTab"],
+  "background": {
+    "service_worker": "background.js"
+  },
   "action": {
-    "default_popup": "popup.html",
     "default_icon": {
       "16": "icons/icon16.png",
       "48": "icons/icon48.png",
       "128": "icons/icon128.png"
-    }
+    },
+    "default_title": "Toggle Twitch Editor"
   },
   "icons": {
     "16": "icons/icon16.png",
@@ -21,6 +24,7 @@
     {
       "matches": ["*://*.twitch.tv/*"],
       "js": ["content.js"],
+      "css": ["editor.css"],
       "run_at": "document_idle"
     }
   ]

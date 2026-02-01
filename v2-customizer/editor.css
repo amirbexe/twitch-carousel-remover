@@ -1,0 +1,316 @@
+/* ── Edit Mode Section Styling ── */
+
+.tc-edit-mode .tc-section {
+  outline: 2px dashed #9146ff !important;
+  outline-offset: -2px;
+  position: relative !important;
+  cursor: grab !important;
+  transition: outline-color 0.2s, opacity 0.2s;
+  overflow: visible !important;
+}
+
+.tc-edit-mode .tc-section:hover {
+  outline-color: #bf94ff !important;
+  background: rgba(145, 70, 255, 0.05) !important;
+}
+
+.tc-edit-mode .tc-section.tc-dimmed {
+  opacity: 0.25 !important;
+}
+
+.tc-edit-mode .tc-section.tc-dragging {
+  opacity: 0.3 !important;
+  cursor: grabbing !important;
+}
+
+.tc-edit-mode .tc-section.tc-drag-over {
+  outline-color: #00ff87 !important;
+  outline-width: 3px !important;
+  outline-style: solid !important;
+}
+
+/* ── Section Label ── */
+
+.tc-section-label {
+  display: none;
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  background: #9146ff;
+  color: #fff;
+  font-size: 11px;
+  font-weight: 600;
+  padding: 2px 8px;
+  border-radius: 3px;
+  z-index: 100001;
+  pointer-events: none;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  white-space: nowrap;
+  max-width: 300px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.tc-edit-mode .tc-section-label {
+  display: block;
+}
+
+/* ── Remove Button ── */
+
+.tc-remove-btn {
+  display: none;
+  position: absolute;
+  top: 4px;
+  right: 4px;
+  width: 24px;
+  height: 24px;
+  background: #eb0400;
+  color: #fff;
+  border: 2px solid #18181b;
+  border-radius: 50%;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  z-index: 100001;
+  line-height: 20px;
+  text-align: center;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  transition: background 0.15s, transform 0.15s;
+  padding: 0;
+}
+
+.tc-remove-btn:hover {
+  background: #ff3b30;
+  transform: scale(1.2);
+}
+
+.tc-edit-mode .tc-remove-btn {
+  display: block;
+}
+
+/* ── Drag Handle ── */
+
+.tc-drag-handle {
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 4px;
+  transform: translateY(-50%);
+  width: 22px;
+  height: 36px;
+  background: #9146ff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-size: 13px;
+  cursor: grab;
+  z-index: 100001;
+  line-height: 36px;
+  text-align: center;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  transition: background 0.15s;
+  padding: 0;
+}
+
+.tc-drag-handle:hover {
+  background: #bf94ff;
+}
+
+.tc-edit-mode .tc-drag-handle {
+  display: block;
+}
+
+/* ── Floating Toolbar ── */
+
+.tc-toolbar {
+  display: none;
+  position: fixed;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #18181b;
+  border: 2px solid #9146ff;
+  border-radius: 12px;
+  padding: 10px 16px;
+  z-index: 100002;
+  gap: 10px;
+  align-items: center;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.7);
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+.tc-toolbar.tc-visible {
+  display: flex;
+}
+
+.tc-toolbar-title {
+  color: #bf94ff;
+  font-size: 13px;
+  font-weight: 700;
+  margin-right: 4px;
+  white-space: nowrap;
+}
+
+.tc-toolbar-btn {
+  padding: 7px 14px;
+  border: none;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.15s, transform 0.1s;
+  white-space: nowrap;
+}
+
+.tc-toolbar-btn:active {
+  transform: scale(0.96);
+}
+
+.tc-btn-save {
+  background: #9146ff;
+  color: #fff;
+}
+
+.tc-btn-save:hover {
+  background: #a970ff;
+}
+
+.tc-btn-restore {
+  background: #2f2f35;
+  color: #efeff1;
+}
+
+.tc-btn-restore:hover {
+  background: #3a3a3d;
+}
+
+.tc-btn-reset {
+  background: #2f2f35;
+  color: #eb0400;
+}
+
+.tc-btn-reset:hover {
+  background: #3a3a3d;
+}
+
+.tc-btn-cancel {
+  background: transparent;
+  color: #adadb8;
+}
+
+.tc-btn-cancel:hover {
+  color: #efeff1;
+}
+
+/* ── Hidden Sections Panel ── */
+
+.tc-hidden-panel {
+  display: none;
+  position: fixed;
+  top: 80px;
+  right: 24px;
+  background: #18181b;
+  border: 2px solid #9146ff;
+  border-radius: 12px;
+  padding: 16px;
+  z-index: 100002;
+  min-width: 260px;
+  max-width: 340px;
+  max-height: 400px;
+  overflow-y: auto;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.7);
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+.tc-hidden-panel.tc-visible {
+  display: block;
+}
+
+.tc-hidden-panel-title {
+  color: #bf94ff;
+  font-size: 14px;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.tc-hidden-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 0;
+  border-bottom: 1px solid #2f2f35;
+}
+
+.tc-hidden-item:last-child {
+  border-bottom: none;
+}
+
+.tc-hidden-item-name {
+  color: #efeff1;
+  font-size: 12px;
+  flex: 1;
+  margin-right: 10px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.tc-hidden-item-add {
+  padding: 4px 10px;
+  background: #9146ff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-size: 11px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.15s;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.tc-hidden-item-add:hover {
+  background: #a970ff;
+}
+
+.tc-no-hidden {
+  color: #adadb8;
+  font-size: 12px;
+  text-align: center;
+  padding: 8px 0;
+  line-height: 1.5;
+}
+
+/* ── Nav Bar Edit Button ── */
+
+#tc-nav-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 5px;
+}
+
+.tc-nav-edit-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  background: transparent;
+  color: #dedee3;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.15s, color 0.15s;
+  padding: 0;
+}
+
+.tc-nav-edit-btn:hover {
+  background: rgba(145, 70, 255, 0.3);
+  color: #bf94ff;
+}
+
+.tc-nav-edit-btn.tc-active {
+  background: #9146ff;
+  color: #fff;
+}
